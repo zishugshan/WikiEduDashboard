@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
-ruby '2.7.1'
+ruby '3.1.0'
+
+gem 'net-smtp', require: false
 
 ### Basic Framework
 gem 'rails', '6.1.4.1'
@@ -55,6 +57,7 @@ gem 'faraday' # Standard HTTP library
 gem 'mediawiki_api', git: 'https://github.com/ragesoss/mediawiki-ruby-api', branch: 'master' # Library for querying mediawiki API
 gem 'restforce' # Salesforce API access
 gem 'oj' # JSON Parsing library
+gem 'rss' # RSS parsing library
 
 ### Internationalization
 gem 'http_accept_language'
