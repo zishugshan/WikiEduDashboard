@@ -4,7 +4,7 @@ ruby '3.1.0'
 gem 'net-smtp', require: false
 
 ### Basic Framework
-gem 'rails', '6.1.4.1'
+gem 'rails', '7.0.1'
 gem 'jbuilder' # DSL for building JSON view templates
 gem 'haml-rails' # HTML template language, used instead of ERB
 gem 'bootsnap', require: false # Makes rails boot faster via caching
@@ -21,7 +21,7 @@ gem 'paper_trail' # Save histories of record changes related to surveys
 gem "paperclip" # used by Course and UserProfile for file attachments. Deprecated.
 gem 'sidekiq' # Framework for running background worker jobs
 gem 'sidekiq-unique-jobs' # Plugin to prevent duplicate jobs in the sidekiq queue
-gem 'sidekiq-cron' # Plugin for cron-style recurring jobs in Sidekiq
+gem 'sidekiq-cron', git: 'https://github.com/ondrejbartas/sidekiq-cron.git' # Plugin for cron-style recurring jobs in Sidekiq
 gem 'dalli' # Caching
 gem 'connection_pool'
 gem 'fuzzily_reloaded' # fuzzy search for ActiveRecord tables
@@ -111,7 +111,8 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-passenger'
   gem 'rails-erd' # Generates`erd.pdf`
-  gem 'annotate' # Generates automatic schema notations on model files
+  # Remove until Rails 7-compatible release of `annotate`
+  # gem 'annotate' # Generates automatic schema notations on model files
   gem 'faker', require: false # Generates random data for example records
   gem 'memory_profiler' # Unsafe for production use
 end
