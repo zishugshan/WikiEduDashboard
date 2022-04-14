@@ -17,6 +17,6 @@ class WordCount
   }.freeze
 
   def self.from_characters(characters)
-    (characters / HALFAK_EN_WIKI_ESTIMATE).to_i
+    return (characters / HALFAK_EN_WIKI_ESTIMATE).to_i
   end
 end
